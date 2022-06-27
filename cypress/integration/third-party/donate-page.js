@@ -10,6 +10,7 @@ describe('Donate page', () => {
     });
     cy.get('.confirm-donation-btn').click();
     cy.contains('We are processing your donation.').should('be.visible');
+    cy.scrollTo(0, -500);
     cy.wait(10000);
     cy.contains('Thank you for being a supporter.').should('be.visible');
   });
